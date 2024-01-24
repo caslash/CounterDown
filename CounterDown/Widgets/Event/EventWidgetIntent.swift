@@ -54,9 +54,7 @@ struct EventEntity: AppEntity, Identifiable, Hashable {
 struct EventEntityQuery: EntityQuery, Sendable {
     func entities(for identifiers: [EventEntity.ID]) async throws -> [EventEntity] {
         logger.info("Loading events for identifiers: \(identifiers)")
-        let config = ModelConfiguration(isStoredInMemoryOnly: false, cloudKitDatabase: .private("iCloud.Cameron.Slash.CounterDown"))
-        let container = try! ModelContainer(for: SavedEvent.self, configurations: config)
-        let modelContext = ModelContext(container)
+        let modelContext = ModelContext(try! ModelContainer(for: SavedEvent.self, configurations: ModelConfiguration(cloudKitDatabase: .private("iCloud.Cameron.Slash.CounterDown"))))
         let events = try! modelContext.fetch(FetchDescriptor<SavedEvent>(predicate: #Predicate { identifiers.contains($0.id) }))
         logger.info("Found \(events.count) events")
         return events.map { EventEntity(from: $0) }
@@ -64,11 +62,13 @@ struct EventEntityQuery: EntityQuery, Sendable {
     
     func suggestedEntities() async throws -> [EventEntity] {
         logger.info("Loading events to suggest for specific event...")
-        let config = ModelConfiguration(isStoredInMemoryOnly: false, cloudKitDatabase: .private("iCloud.Cameron.Slash.CounterDown"))
-        let container = try! ModelContainer(for: SavedEvent.self, configurations: config)
-        let modelContext = ModelContext(container)
+        let modelContext = ModelContext(try! ModelContainer(for: SavedEvent.self, configurations: ModelConfiguration(cloudKitDatabase: .private("iCloud.Cameron.Slash.CounterDown"))))
         let events = try! modelContext.fetch(FetchDescriptor<SavedEvent>())
         logger.info("Found \(events.count) events")
         return events.map { EventEntity(from: $0) }
+    }
+    
+    func defaultResult() async -> EventEntity? {
+        try? await self.suggestedEntities().first
     }
 }

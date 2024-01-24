@@ -14,21 +14,27 @@ struct EventWidgetView: View {
     var entry: EventWidgetEntry
     
     var body: some View {
-        switch family {
-        case .systemSmall:
-            SystemSmallEventView(event: self.entry.event ?? SavedEvent.example)
-                .containerBackground(self.entry.event?.unwrappedColor ?? .blue, for: .widget)
-        case .systemMedium:
-            SystemMediumEventView(event: self.entry.event ?? SavedEvent.example)
-                .containerBackground(self.entry.event?.unwrappedColor ?? .blue, for: .widget)
-        default:
-            AccessoryRectangularEventView(event: self.entry.event ?? SavedEvent.example)
-                .containerBackground(.clear, for: .widget)
+        if let event = entry.event {
+            switch family {
+            case .systemSmall:
+                SystemSmallEventView(event: event)
+                    .containerBackground(event.unwrappedColor, for: .widget)
+            case .systemMedium:
+                SystemMediumEventView(event: event)
+                    .containerBackground(event.unwrappedColor, for: .widget)
+            default:
+                AccessoryRectangularEventView(event: event)
+                    .containerBackground(event.unwrappedColor, for: .widget)
+            }
+        } else {
+            Text("No Events")
+                .foregroundStyle(.secondary)
+                .containerBackground(.fill, for: .widget)
         }
     }
 }
 
-
+#if !os(watchOS)
 #Preview("SystemSmall", as: WidgetFamily.systemSmall) {
     EventWidget()
 } timeline: {
@@ -40,8 +46,9 @@ struct EventWidgetView: View {
 } timeline: {
     EventWidgetEntry(date: .now, event: SavedEvent.example)
 }
+#endif
 
-#if os(iOS)
+#if !os(macOS)
 #Preview("AccessoryRectangular", as: WidgetFamily.accessoryRectangular) {
     EventWidget()
 } timeline: {

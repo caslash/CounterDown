@@ -45,7 +45,7 @@ struct EventTimelineProvider: AppIntentTimelineProvider {
             return .empty
         }
         
-        return EventWidgetEntry(date: event.due)
+        return EventWidgetEntry(date: event.due, event: event)
     }
     
     func timeline(for configuration: EventWidgetIntent, in context: Context) async -> Timeline<EventWidgetEntry> {
@@ -68,5 +68,16 @@ struct EventTimelineProvider: AppIntentTimelineProvider {
         
         let timeline = Timeline(entries: entries, policy: .after(Calendar.current.date(byAdding: .hour, value: 2, to: currentDate)!))
         return timeline
+    }
+    
+    func recommendations() -> [AppIntentRecommendation<EventWidgetIntent>] {
+        let events = try! self.modelContext.fetch(FetchDescriptor<SavedEvent>())
+        var recs = [AppIntentRecommendation<EventWidgetIntent>]()
+        
+        for event in events {
+            recs.append(AppIntentRecommendation(intent: EventWidgetIntent(specificEvent: EventEntity(id: event.id, name: event.name)), description: event.name))
+        }
+        
+        return recs
     }
 }

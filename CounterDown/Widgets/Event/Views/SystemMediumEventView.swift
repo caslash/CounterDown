@@ -78,6 +78,7 @@ struct SystemMediumEventView: View {
     }
 }
 
+#if !os(watchOS)
 #Preview("Example", as: WidgetFamily.systemMedium) {
     EventWidget()
 } timeline: {
@@ -89,3 +90,4 @@ struct SystemMediumEventView: View {
 } timeline: {
     EventWidgetEntry(date: .now, event: SavedEvent(color: .blue, due: Date.now.addingTimeInterval(40029743), name: "New Event", components: [.year, .month, .day, .hour, .minute, .second]))
 }
+#endif

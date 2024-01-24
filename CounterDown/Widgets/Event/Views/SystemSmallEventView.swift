@@ -30,6 +30,7 @@ struct SystemSmallEventView: View {
     }
 }
 
+#if !os(watchOS)
 #Preview("Example", as: WidgetFamily.systemSmall) {
     EventWidget()
 } timeline: {
@@ -41,3 +42,4 @@ struct SystemSmallEventView: View {
 } timeline: {
     EventWidgetEntry(date: .now, event: SavedEvent.birthday)
 }
+#endif

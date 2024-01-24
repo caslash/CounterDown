@@ -29,6 +29,8 @@ struct EventWidget: Widget {
         ) { entry in
             EventWidgetView(entry: entry)
         }
+        .configurationDisplayName("Countdown To Event")
+        .description("Diplays selected event countdown.")
         .supportedFamilies(self.families)
     }
 }
