@@ -6,29 +6,29 @@
 //
 
 import Foundation
+import Observation
 import SlashKit
 import SwiftData
 import SwiftUI
-import Observation
 
 @Model
 public class SavedEvent: Codable, Identifiable {
     enum CodingKeys: CodingKey {
         case colorHex, due, id, isRecurring, name, recurrenceInterval, components
     }
-    
+
     #if !os(macOS)
     @ObservationIgnored public static var example: SavedEvent = .init(color: .blue, due: Date.now.addingTimeInterval(2577600), isRecurring: true, name: "Example Event", recurrenceInterval: .monthly, components: [.day, .hour, .minute, .second])
     @ObservationIgnored public static var new: SavedEvent = .init(color: .gray, due: Date.now.addingTimeInterval(2629743), name: "New Event")
     @ObservationIgnored public static var visionpro: SavedEvent = .init(color: .blue, due: Date(timeIntervalSince1970: 1707253200), name: "Vision Pro")
-    @ObservationIgnored public static var birthday: SavedEvent =  .init(color: .brown, due: Date(timeIntervalSince1970: 1721966400), name: "My Birthday")
+    @ObservationIgnored public static var birthday: SavedEvent = .init(color: .brown, due: Date(timeIntervalSince1970: 1721966400), name: "My Birthday")
     #else
     @ObservationIgnored public static var example: SavedEvent = .init(nsColor: .blue, due: Date.now.addingTimeInterval(2577600), isRecurring: true, name: "Example Event", recurrenceInterval: .monthly, components: [.day, .hour, .minute, .second])
     @ObservationIgnored public static var new: SavedEvent = .init(nsColor: .gray, due: Date.now.addingTimeInterval(2629743), name: "New Event")
     @ObservationIgnored public static var visionpro: SavedEvent = .init(nsColor: .blue, due: Date(timeIntervalSince1970: 1707253200), name: "Vision Pro")
-    @ObservationIgnored public static var birthday: SavedEvent =  .init(nsColor: .brown, due: Date(timeIntervalSince1970: 1721966400), name: "My Birthday")
+    @ObservationIgnored public static var birthday: SavedEvent = .init(nsColor: .brown, due: Date(timeIntervalSince1970: 1721966400), name: "My Birthday")
     #endif
-    
+
     public var colorHex: String = "#000000"
     public var due: Date = Date.now.addingTimeInterval(2629743)
     public var id: UUID = UUID()
@@ -36,14 +36,15 @@ public class SavedEvent: Codable, Identifiable {
     public var name: String = "New Event"
     public var recurrenceInterval: Int16 = Int16(RecurrenceInterval.none.rawValue)
     public var components: Data = try! Utilities.shared.jsonEncoder.encode([Calendar.Component.month, Calendar.Component.day, Calendar.Component.hour, Calendar.Component.minute, Calendar.Component.second])
-    
+
     public init(
         colorHex: String,
         due: Date,
         isRecurring: Bool = false,
         name: String,
         recurrenceInterval: RecurrenceInterval = .none,
-        components: [Calendar.Component] = [.day, .hour, .minute, .second]) {
+        components: [Calendar.Component] = [.day, .hour, .minute, .second])
+    {
         self.colorHex = colorHex
         self.due = due
         self.isRecurring = isRecurring
@@ -51,17 +52,18 @@ public class SavedEvent: Codable, Identifiable {
         self.recurrenceInterval = Int16(recurrenceInterval.rawValue)
         self.components = try! Utilities.shared.jsonEncoder.encode(components)
     }
-    
+
     public convenience init(
         color: Color,
         due: Date,
         isRecurring: Bool = false,
         name: String,
         recurrenceInterval: RecurrenceInterval = .none,
-        components: [Calendar.Component] = [.day, .hour, .minute, .second]) {
-            self.init(colorHex: color.toHexString(), due: due, isRecurring: isRecurring, name: name, recurrenceInterval: recurrenceInterval, components: components)
+        components: [Calendar.Component] = [.day, .hour, .minute, .second])
+    {
+        self.init(colorHex: color.toHexString(), due: due, isRecurring: isRecurring, name: name, recurrenceInterval: recurrenceInterval, components: components)
     }
-    
+
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.colorHex = try container.decode(String.self, forKey: .colorHex)
@@ -71,7 +73,7 @@ public class SavedEvent: Codable, Identifiable {
         self.recurrenceInterval = try container.decode(Int16.self, forKey: .recurrenceInterval)
         self.components = try container.decode(Data.self, forKey: .components)
     }
-    
+
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.colorHex, forKey: .colorHex)
@@ -81,7 +83,7 @@ public class SavedEvent: Codable, Identifiable {
         try container.encode(self.recurrenceInterval, forKey: .recurrenceInterval)
         try container.encode(self.components, forKey: .components)
     }
-    
+
     #if canImport(AppKit)
     public convenience init(
         nsColor: NSColor,
@@ -89,8 +91,9 @@ public class SavedEvent: Codable, Identifiable {
         isRecurring: Bool = false,
         name: String,
         recurrenceInterval: RecurrenceInterval = .none,
-        components: [Calendar.Component] = [.day, .hour, .minute, .second]) {
-            self.init(colorHex: nsColor.usingColorSpace(.deviceRGB)!.toHexString(), due: due, isRecurring: isRecurring, name: name, recurrenceInterval: recurrenceInterval, components: components)
+        components: [Calendar.Component] = [.day, .hour, .minute, .second])
+    {
+        self.init(colorHex: nsColor.usingColorSpace(.deviceRGB)!.toHexString(), due: due, isRecurring: isRecurring, name: name, recurrenceInterval: recurrenceInterval, components: components)
     }
     #endif
 }
@@ -98,16 +101,16 @@ public class SavedEvent: Codable, Identifiable {
 extension SavedEvent: CustomStringConvertible {
     public var description: String {
         return """
-                {
-                    "id": \(self.id),
-                    "name": \(self.name),
-                    "due": \(self.due.formatted()),
-                    "colorHex": \(self.colorHex),
-                    "components": \(try! Utilities.shared.jsonDecoder.decode([Calendar.Component].self, from: self.components).description),
-                    "isRecurring": \(self.isRecurring.description),
-                    "recurrenceInterval": \(RecurrenceInterval(rawValue: Int(self.recurrenceInterval))?.displayName ?? "nil")
-                }
-                """
+        {
+            "id": \(self.id),
+            "name": \(self.name),
+            "due": \(self.due.formatted()),
+            "colorHex": \(self.colorHex),
+            "components": \(try! Utilities.shared.jsonDecoder.decode([Calendar.Component].self, from: self.components).description),
+            "isRecurring": \(self.isRecurring.description),
+            "recurrenceInterval": \(RecurrenceInterval(rawValue: Int(self.recurrenceInterval))?.displayName ?? "nil")
+        }
+        """
     }
 }
 
@@ -121,22 +124,27 @@ public extension SavedEvent {
     var dateComponents: DateComponents {
         return Calendar.current.dateComponents(Set(self.unwrappedComponents), from: DateService.shared.now, to: self.due)
     }
-    
+
     func yearsLeft() -> String {
         return String(format: "%02d", self.dateComponents.year ?? 00)
     }
+
     func monthsLeft() -> String {
         return String(format: "%02d", self.dateComponents.month ?? 00)
     }
+
     func daysLeft() -> String {
         return String(format: "%02d", self.dateComponents.day ?? 00)
     }
+
     func hoursLeft() -> String {
         return String(format: "%02d", self.dateComponents.hour ?? 00)
     }
+
     func minutesLeft() -> String {
         return String(format: "%02d", self.dateComponents.minute ?? 00)
     }
+
     func secondsLeft() -> String {
         return String(format: "%02d", self.dateComponents.second ?? 00)
     }

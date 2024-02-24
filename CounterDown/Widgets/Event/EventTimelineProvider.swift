@@ -19,7 +19,8 @@ struct EventWidgetEntry: TimelineEntry {
 }
 
 struct EventTimelineProvider: AppIntentTimelineProvider {
-    let modelContext = ModelContext(try! ModelContainer(for: SavedEvent.self, configurations: ModelConfiguration(cloudKitDatabase: .private("iCloud.Cameron.Slash.CounterDown"))))
+//    let modelContext = ModelContext(SwiftDataService().container)
+    let modelContext = ModelContext(try! ModelContainer(for: SavedEvent.self))
     
     init() { }
     

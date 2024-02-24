@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E05935E2B745F0F0004C159 /* SwiftDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E05935D2B745F0F0004C159 /* SwiftDataService.swift */; };
 		2EBAA43C2B538C6000F3005D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAA43B2B538C6000F3005D /* Utilities.swift */; };
 		2EBAA43F2B538EB200F3005D /* SlashKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EBAA43E2B538EB200F3005D /* SlashKit */; };
 		2EBAA4412B538F6E00F3005D /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAA4402B538F6E00F3005D /* DateService.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E05935D2B745F0F0004C159 /* SwiftDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataService.swift; sourceTree = "<group>"; };
 		2EBAA43B2B538C6000F3005D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		2EBAA4402B538F6E00F3005D /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		2EBAA4482B5497B500F3005D /* SavedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEvent.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 				2EBAA43B2B538C6000F3005D /* Utilities.swift */,
 				2EFEBA492B537E6100AE19F3 /* PermissionsService.swift */,
 				2EBAA4402B538F6E00F3005D /* DateService.swift */,
+				2E05935D2B745F0F0004C159 /* SwiftDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EBAA4412B538F6E00F3005D /* DateService.swift in Sources */,
+				2E05935E2B745F0F0004C159 /* SwiftDataService.swift in Sources */,
 				2EBAA43C2B538C6000F3005D /* Utilities.swift in Sources */,
 				2EFEBA4A2B537E6100AE19F3 /* PermissionsService.swift in Sources */,
 				2EBAA5152B58DAA700F3005D /* TimeInterval+Extensions.swift in Sources */,

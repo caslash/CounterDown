@@ -14,11 +14,12 @@ struct CounterDownWatchApp: App {
     @State private var permissionsService = PermissionsService.shared
     @State private var utilities = Utilities.shared
     @State private var dateProvider = DateService.shared
+    private var dataService = SwiftDataService()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: SavedEvent.self)
+                .modelContainer(dataService.container)
                 .environment(permissionsService)
                 .environment(utilities)
                 .environment(dateProvider)
