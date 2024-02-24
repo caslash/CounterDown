@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CounterDown (Mac) Release.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>CounterDown (Mac).xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>CounterDown (Watch).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +43,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>2E01056B2B5E177A00A03873</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2E179CBD2B60CD2500972657</key>
 		<dict>
 			<key>primary</key>
 			<true/>

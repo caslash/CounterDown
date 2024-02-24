@@ -12,11 +12,22 @@ import SwiftUI
 import Observation
 
 @Model
-public class SavedEvent: Identifiable {
-    @ObservationIgnored public static var example: SavedEvent = .init(color: Color.blue, due: Date.now.addingTimeInterval(2577600), isRecurring: true, name: "Example Event", recurrenceInterval: .monthly, components: [.day, .hour, .minute, .second])
-    @ObservationIgnored public static var new: SavedEvent = .init(color: Color.gray, due: Date.now.addingTimeInterval(2629743), name: "New Event")
+public class SavedEvent: Codable, Identifiable {
+    enum CodingKeys: CodingKey {
+        case colorHex, due, id, isRecurring, name, recurrenceInterval, components
+    }
+    
+    #if !os(macOS)
+    @ObservationIgnored public static var example: SavedEvent = .init(color: .blue, due: Date.now.addingTimeInterval(2577600), isRecurring: true, name: "Example Event", recurrenceInterval: .monthly, components: [.day, .hour, .minute, .second])
+    @ObservationIgnored public static var new: SavedEvent = .init(color: .gray, due: Date.now.addingTimeInterval(2629743), name: "New Event")
     @ObservationIgnored public static var visionpro: SavedEvent = .init(color: .blue, due: Date(timeIntervalSince1970: 1707253200), name: "Vision Pro")
     @ObservationIgnored public static var birthday: SavedEvent =  .init(color: .brown, due: Date(timeIntervalSince1970: 1721966400), name: "My Birthday")
+    #else
+    @ObservationIgnored public static var example: SavedEvent = .init(nsColor: .blue, due: Date.now.addingTimeInterval(2577600), isRecurring: true, name: "Example Event", recurrenceInterval: .monthly, components: [.day, .hour, .minute, .second])
+    @ObservationIgnored public static var new: SavedEvent = .init(nsColor: .gray, due: Date.now.addingTimeInterval(2629743), name: "New Event")
+    @ObservationIgnored public static var visionpro: SavedEvent = .init(nsColor: .blue, due: Date(timeIntervalSince1970: 1707253200), name: "Vision Pro")
+    @ObservationIgnored public static var birthday: SavedEvent =  .init(nsColor: .brown, due: Date(timeIntervalSince1970: 1721966400), name: "My Birthday")
+    #endif
     
     public var colorHex: String = "#000000"
     public var due: Date = Date.now.addingTimeInterval(2629743)
@@ -50,6 +61,38 @@ public class SavedEvent: Identifiable {
         components: [Calendar.Component] = [.day, .hour, .minute, .second]) {
             self.init(colorHex: color.toHexString(), due: due, isRecurring: isRecurring, name: name, recurrenceInterval: recurrenceInterval, components: components)
     }
+    
+    public required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.colorHex = try container.decode(String.self, forKey: .colorHex)
+        self.due = try container.decode(Date.self, forKey: .due)
+        self.isRecurring = try container.decode(Bool.self, forKey: .isRecurring)
+        self.name = try container.decode(String.self, forKey: .name)
+        self.recurrenceInterval = try container.decode(Int16.self, forKey: .recurrenceInterval)
+        self.components = try container.decode(Data.self, forKey: .components)
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.colorHex, forKey: .colorHex)
+        try container.encode(self.due, forKey: .due)
+        try container.encode(self.isRecurring, forKey: .isRecurring)
+        try container.encode(self.name, forKey: .name)
+        try container.encode(self.recurrenceInterval, forKey: .recurrenceInterval)
+        try container.encode(self.components, forKey: .components)
+    }
+    
+    #if canImport(AppKit)
+    public convenience init(
+        nsColor: NSColor,
+        due: Date,
+        isRecurring: Bool = false,
+        name: String,
+        recurrenceInterval: RecurrenceInterval = .none,
+        components: [Calendar.Component] = [.day, .hour, .minute, .second]) {
+            self.init(colorHex: nsColor.usingColorSpace(.deviceRGB)!.toHexString(), due: due, isRecurring: isRecurring, name: name, recurrenceInterval: recurrenceInterval, components: components)
+    }
+    #endif
 }
 
 extension SavedEvent: CustomStringConvertible {

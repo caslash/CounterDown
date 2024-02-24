@@ -28,7 +28,7 @@ struct AccessoryRectangularEventView: View {
     }
 }
 
-
+#if !os(macOS)
 #Preview("Example", as: WidgetFamily.accessoryRectangular) {
     EventWidget()
 } timeline: {
@@ -40,3 +40,4 @@ struct AccessoryRectangularEventView: View {
 } timeline: {
     EventWidgetEntry(date: .now, event: SavedEvent(color: .blue, due: Date.now.addingTimeInterval(40029743), name: "New Event", components: [.year, .month, .day, .hour, .minute, .second]))
 }
+#endif

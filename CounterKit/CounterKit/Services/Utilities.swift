@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftData
 import SwiftUI
 import Observation
 
@@ -26,10 +27,25 @@ public class Utilities {
         }
     }
     
+    @available(macOS 14.0, *)
+    public var menubarEvent: SavedEvent? = nil {
+        didSet {
+            if let encoded = try? self.jsonEncoder.encode(menubarEvent) {
+                self.userDefaults.set(encoded, forKey: "user_selected_menubarevent")
+            }
+        }
+    }
+    
     init() {
         if let user_selected_accentcolor = self.userDefaults.data(forKey: "user_selected_accentcolor") {
             if let decoded = try? self.jsonDecoder.decode(Color.self, from: user_selected_accentcolor) {
                 self.accentcolor = decoded
+            }
+        }
+        
+        if let user_selected_menubarevent = self.userDefaults.data(forKey: "user_selected_menubarevent") {
+            if let decoded = try? self.jsonDecoder.decode(SavedEvent.self, from: user_selected_menubarevent) {
+                self.menubarEvent = decoded
             }
         }
     }
