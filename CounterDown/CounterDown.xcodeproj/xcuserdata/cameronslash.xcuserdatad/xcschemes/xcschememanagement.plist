@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CounterDown (Mac) Release.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
-		</dict>
 		<key>CounterDown (Mac).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,7 +27,7 @@
 		<key>Widgets (Multiplatform).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Widgets (Watch).xcscheme_^#shared#^_</key>
 		<dict>

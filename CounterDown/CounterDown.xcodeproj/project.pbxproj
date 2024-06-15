@@ -20,7 +20,6 @@
 		2E179CCE2B60D1A700972657 /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E179CCD2B60D1A700972657 /* CounterKit.framework */; };
 		2E179CCF2B60D1A700972657 /* CounterKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E179CCD2B60D1A700972657 /* CounterKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2E179CD22B60D1B100972657 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E179CD12B60D1B100972657 /* DynamicColor */; };
-		2E179CD32B60D1B900972657 /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2EBAA4FA2B58D3A100F3005D /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E1AD5422B5A372900F405A4 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1AD5412B5A372900F405A4 /* DynamicColor */; };
 		2E1AD5492B5A394100F405A4 /* SystemSmallEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AD5452B5A382B00F405A4 /* SystemSmallEventView.swift */; };
 		2E1AD54A2B5A394500F405A4 /* SystemMediumEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AD5472B5A387F00F405A4 /* SystemMediumEventView.swift */; };
@@ -28,6 +27,7 @@
 		2E45F06E2B6728C800C0432E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E45F06D2B6728C800C0432E /* SettingsView.swift */; };
 		2E66C1AA2B58DE4C0032249C /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E66C1A92B58DE4C0032249C /* CounterKit.framework */; };
 		2E66C1B62B5A1E0D0032249C /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E66C1B52B5A1E0D0032249C /* DynamicColor */; };
+		2E91640D2C1D3FA9007D6D62 /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2EBAA4FA2B58D3A100F3005D /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2EA86A9E2B5C715300E4B1FD /* AccessoryRectangularEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA86A9D2B5C715300E4B1FD /* AccessoryRectangularEventView.swift */; };
 		2EA86AA22B5CE6BB00E4B1FD /* EventGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA86AA12B5CE6BB00E4B1FD /* EventGridView.swift */; };
 		2EBAA44F2B54AE7600F3005D /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBAA44E2B54AE7600F3005D /* CounterKit.framework */; };
@@ -71,7 +71,7 @@
 			remoteGlobalIDString = 2EBAA4F92B58D3A100F3005D;
 			remoteInfo = Widgets;
 		};
-		2E179CD42B60D1B900972657 /* PBXContainerItemProxy */ = {
+		2E91640E2C1D3FA9007D6D62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2EFEBA2F2B525F4000AE19F3 /* Project object */;
 			proxyType = 1;
@@ -121,13 +121,13 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E179CD62B60D1BA00972657 /* Embed Foundation Extensions */ = {
+		2E9164102C1D3FA9007D6D62 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2E179CD32B60D1B900972657 /* Widgets.appex in Embed Foundation Extensions */,
+				2E91640D2C1D3FA9007D6D62 /* Widgets.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +217,6 @@
 		2EF29BE72B60D8660004F616 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		2EF29BE92B63643E0004F616 /* CounterDown-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "CounterDown-Release.entitlements"; sourceTree = "<group>"; };
 		2EF29BEB2B6364DF0004F616 /* CounterDownWatch-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "CounterDownWatch-Release.entitlements"; sourceTree = "<group>"; };
-		2EF29BEC2B6365440004F616 /* CounterDownMac-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "CounterDownMac-Release.entitlements"; sourceTree = "<group>"; };
 		2EF29BED2B6365A20004F616 /* Widgets-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "Widgets-Release.entitlements"; sourceTree = "<group>"; };
 		2EFEBA372B525F4000AE19F3 /* CounterDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFEBA3A2B525F4000AE19F3 /* CounterDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDownApp.swift; sourceTree = "<group>"; };
@@ -289,7 +288,6 @@
 				2E179CC02B60CD2500972657 /* CounterDownMacApp.swift */,
 				2EF29BDF2B60D28D0004F616 /* Views */,
 				2E179CC42B60CD2600972657 /* Assets.xcassets */,
-				2EF29BEC2B6365440004F616 /* CounterDownMac-Release.entitlements */,
 				2E179CC92B60CD2600972657 /* CounterDownMac.entitlements */,
 				2E179CC62B60CD2600972657 /* Preview Content */,
 			);
@@ -479,12 +477,12 @@
 				2E179CBB2B60CD2500972657 /* Frameworks */,
 				2E179CBC2B60CD2500972657 /* Resources */,
 				2E179CD02B60D1A700972657 /* Embed Frameworks */,
-				2E179CD62B60D1BA00972657 /* Embed Foundation Extensions */,
+				2E9164102C1D3FA9007D6D62 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2E179CD52B60D1B900972657 /* PBXTargetDependency */,
+				2E91640F2C1D3FA9007D6D62 /* PBXTargetDependency */,
 			);
 			name = "CounterDown (Mac)";
 			packageProductDependencies = (
@@ -547,7 +545,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					2E01056B2B5E177A00A03873 = {
 						CreatedOnToolsVersion = 15.2;
@@ -574,6 +572,7 @@
 			mainGroup = 2EFEBA2E2B525F4000AE19F3;
 			packageReferences = (
 				2E66C1B42B5A1E0D0032249C /* XCRemoteSwiftPackageReference "DynamicColor" */,
+				2E0A45522C1A86C90060E15B /* XCRemoteSwiftPackageReference "SlashKit" */,
 			);
 			productRefGroup = 2EFEBA382B525F4000AE19F3 /* Products */;
 			projectDirPath = "";
@@ -690,10 +689,10 @@
 			target = 2EBAA4F92B58D3A100F3005D /* Widgets */;
 			targetProxy = 2E0105882B5E1A1F00A03873 /* PBXContainerItemProxy */;
 		};
-		2E179CD52B60D1B900972657 /* PBXTargetDependency */ = {
+		2E91640F2C1D3FA9007D6D62 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2EBAA4F92B58D3A100F3005D /* Widgets */;
-			targetProxy = 2E179CD42B60D1B900972657 /* PBXContainerItemProxy */;
+			targetProxy = 2E91640E2C1D3FA9007D6D62 /* PBXContainerItemProxy */;
 		};
 		2EBAA5092B58D3A300F3005D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -781,7 +780,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -797,7 +797,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -817,7 +817,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -833,7 +834,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Cameron.Slash.Counterdown.mac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -851,6 +852,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -896,6 +898,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -966,6 +969,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -1031,6 +1035,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1065,6 +1070,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1111,6 +1117,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 3S8XC6A264;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1197,6 +1204,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2E0A45522C1A86C90060E15B /* XCRemoteSwiftPackageReference "SlashKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/caslash/SlashKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		2E66C1B42B5A1E0D0032249C /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yannickl/DynamicColor.git";

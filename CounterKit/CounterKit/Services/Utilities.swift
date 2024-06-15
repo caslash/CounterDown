@@ -43,10 +43,10 @@ public class Utilities {
             }
         }
         
-        if let user_selected_menubarevent = self.userDefaults.data(forKey: "user_selected_menubarevent") {
-            if let decoded = try? self.jsonDecoder.decode(SavedEvent.self, from: user_selected_menubarevent) {
-                self.menubarEvent = decoded
-            }
-        }
+//        if let user_selected_menubarevent = self.userDefaults.data(forKey: "user_selected_menubarevent") {
+//            if let decoded = try? self.jsonDecoder.decode(SavedEvent.self, from: user_selected_menubarevent) {
+//                self.menubarEvent = decoded
+//            }
+//        }
     }
 }

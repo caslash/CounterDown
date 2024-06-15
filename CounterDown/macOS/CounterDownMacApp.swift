@@ -15,12 +15,10 @@ struct CounterDownMacApp: App {
     @State private var utilities = Utilities.shared
     @State private var dateProvider = DateService.shared
     
-    let container = try! ModelContainer(for: SavedEvent.self)
-    
     var body: some Scene {
         MenuBarExtra {
             ContentView()
-                .modelContainer(container)
+                .modelContainer(for: SavedEvent.self)
                 .environment(permissionsService)
                 .environment(utilities)
                 .environment(dateProvider)
@@ -36,7 +34,7 @@ struct CounterDownMacApp: App {
         
         WindowGroup(id: "Settings") {
             SettingsView(permissionsService: self.permissionsService, utilities: self.utilities)
-                .modelContainer(container)
+                .modelContainer(for: SavedEvent.self)
         }
         .windowResizability(.contentMinSize)
     }
