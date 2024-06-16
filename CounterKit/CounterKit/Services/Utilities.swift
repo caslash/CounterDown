@@ -28,7 +28,7 @@ public class Utilities {
     }
     
     @available(macOS 14.0, *)
-    public var menubarEvent: SavedEvent? = nil {
+    public var menubarEvent: UUID? = nil {
         didSet {
             if let encoded = try? self.jsonEncoder.encode(menubarEvent) {
                 self.userDefaults.set(encoded, forKey: "user_selected_menubarevent")
@@ -43,10 +43,10 @@ public class Utilities {
             }
         }
         
-//        if let user_selected_menubarevent = self.userDefaults.data(forKey: "user_selected_menubarevent") {
-//            if let decoded = try? self.jsonDecoder.decode(SavedEvent.self, from: user_selected_menubarevent) {
-//                self.menubarEvent = decoded
-//            }
-//        }
+        if let user_selected_menubarevent = self.userDefaults.data(forKey: "user_selected_menubarevent") {
+            if let decoded = try? self.jsonDecoder.decode(UUID.self, from: user_selected_menubarevent) {
+                self.menubarEvent = decoded
+            }
+        }
     }
 }

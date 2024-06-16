@@ -35,6 +35,12 @@ struct ContentView: View {
                     } label: {
                         Label("Delete", systemImage: "trash")
                     }
+                    
+                    Button {
+                        self.utilities.menubarEvent = event.id
+                    } label: {
+                        Label("Pin To Menu Bar", systemImage: "plus")
+                    }
                 }
             }
             .toolbar(removing: .sidebarToggle)
