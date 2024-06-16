@@ -24,10 +24,11 @@
 		2E1AD5492B5A394100F405A4 /* SystemSmallEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AD5452B5A382B00F405A4 /* SystemSmallEventView.swift */; };
 		2E1AD54A2B5A394500F405A4 /* SystemMediumEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1AD5472B5A387F00F405A4 /* SystemMediumEventView.swift */; };
 		2E45F06C2B66356500C0432E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E179CC42B60CD2600972657 /* Assets.xcassets */; };
-		2E45F06E2B6728C800C0432E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E45F06D2B6728C800C0432E /* SettingsView.swift */; };
+		2E541ADE2C1E106A003766B1 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E541ADD2C1E106A003766B1 /* EventDetailView.swift */; };
 		2E66C1AA2B58DE4C0032249C /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E66C1A92B58DE4C0032249C /* CounterKit.framework */; };
 		2E66C1B62B5A1E0D0032249C /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 2E66C1B52B5A1E0D0032249C /* DynamicColor */; };
 		2E91640D2C1D3FA9007D6D62 /* Widgets.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2EBAA4FA2B58D3A100F3005D /* Widgets.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E9164122C1D4685007D6D62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9164112C1D4685007D6D62 /* ContentView.swift */; };
 		2EA86A9E2B5C715300E4B1FD /* AccessoryRectangularEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA86A9D2B5C715300E4B1FD /* AccessoryRectangularEventView.swift */; };
 		2EA86AA22B5CE6BB00E4B1FD /* EventGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA86AA12B5CE6BB00E4B1FD /* EventGridView.swift */; };
 		2EBAA44F2B54AE7600F3005D /* CounterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EBAA44E2B54AE7600F3005D /* CounterKit.framework */; };
@@ -45,7 +46,7 @@
 		2EBAA5112B58D7AC00F3005D /* EventTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAA5102B58D7AC00F3005D /* EventTimelineProvider.swift */; };
 		2EBAA5182B58DC5C00F3005D /* EventWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAA5172B58DC5C00F3005D /* EventWidgetView.swift */; };
 		2ECE3EFF2B5E1E5300B68BE7 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE3EFE2B5E1E5300B68BE7 /* EventView.swift */; };
-		2EF29BDE2B60D2820004F616 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF29BDD2B60D2820004F616 /* ContentView.swift */; };
+		2EF29BDE2B60D2820004F616 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF29BDD2B60D2820004F616 /* MenuBarView.swift */; };
 		2EF29BE22B60D2A60004F616 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF29BE12B60D2A60004F616 /* EventListView.swift */; };
 		2EF29BE52B60D8490004F616 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66C1B02B5A08910032249C /* EventView.swift */; };
 		2EF29BE62B60D8490004F616 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA86A9F2B5CE21100E4B1FD /* EventListView.swift */; };
@@ -183,10 +184,12 @@
 		2E179CCD2B60D1A700972657 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1AD5452B5A382B00F405A4 /* SystemSmallEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSmallEventView.swift; sourceTree = "<group>"; };
 		2E1AD5472B5A387F00F405A4 /* SystemMediumEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMediumEventView.swift; sourceTree = "<group>"; };
-		2E45F06D2B6728C800C0432E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2E541ADC2C1D59A6003766B1 /* CounterDown--Mac--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CounterDown--Mac--Info.plist"; sourceTree = "<group>"; };
+		2E541ADD2C1E106A003766B1 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		2E66C1A92B58DE4C0032249C /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E66C1B02B5A08910032249C /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		2E72BC0B2B5E0D88002F75F1 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9164112C1D4685007D6D62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2EA86A9D2B5C715300E4B1FD /* AccessoryRectangularEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryRectangularEventView.swift; sourceTree = "<group>"; };
 		2EA86A9F2B5CE21100E4B1FD /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		2EA86AA12B5CE6BB00E4B1FD /* EventGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventGridView.swift; sourceTree = "<group>"; };
@@ -212,7 +215,7 @@
 		2ECE3EFE2B5E1E5300B68BE7 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		2ECE3F002B5E28A100B68BE7 /* CounterDownWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterDownWatch.entitlements; sourceTree = "<group>"; };
 		2ECE3F012B5E2D1600B68BE7 /* CounterDownWatchInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CounterDownWatchInfo.plist; sourceTree = "<group>"; };
-		2EF29BDD2B60D2820004F616 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2EF29BDD2B60D2820004F616 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		2EF29BE12B60D2A60004F616 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		2EF29BE72B60D8660004F616 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		2EF29BE92B63643E0004F616 /* CounterDown-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "CounterDown-Release.entitlements"; sourceTree = "<group>"; };
@@ -381,8 +384,9 @@
 			isa = PBXGroup;
 			children = (
 				2EF29BE02B60D2970004F616 /* Components */,
-				2EF29BDD2B60D2820004F616 /* ContentView.swift */,
-				2E45F06D2B6728C800C0432E /* SettingsView.swift */,
+				2EF29BDD2B60D2820004F616 /* MenuBarView.swift */,
+				2E9164112C1D4685007D6D62 /* ContentView.swift */,
+				2E541ADD2C1E106A003766B1 /* EventDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -399,6 +403,7 @@
 		2EFEBA2E2B525F4000AE19F3 = {
 			isa = PBXGroup;
 			children = (
+				2E541ADC2C1D59A6003766B1 /* CounterDown--Mac--Info.plist */,
 				2EFEBA392B525F4000AE19F3 /* iOS */,
 				2E01056D2B5E177B00A03873 /* watchOS */,
 				2E179CBF2B60CD2500972657 /* macOS */,
@@ -638,11 +643,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E45F06E2B6728C800C0432E /* SettingsView.swift in Sources */,
 				2EF29BE22B60D2A60004F616 /* EventListView.swift in Sources */,
-				2EF29BDE2B60D2820004F616 /* ContentView.swift in Sources */,
+				2E9164122C1D4685007D6D62 /* ContentView.swift in Sources */,
+				2EF29BDE2B60D2820004F616 /* MenuBarView.swift in Sources */,
 				2E179CC12B60CD2500972657 /* CounterDownMacApp.swift in Sources */,
 				2EF29BE82B60D8660004F616 /* EventView.swift in Sources */,
+				2E541ADE2C1E106A003766B1 /* EventDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,6 +794,7 @@
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CounterDown--Mac--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CounterDown;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
@@ -825,6 +832,7 @@
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CounterDown--Mac--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CounterDown;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;

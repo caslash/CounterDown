@@ -20,12 +20,12 @@ public class SavedEvent: Codable, Identifiable {
     #if !os(macOS)
     @ObservationIgnored public static var example: SavedEvent = .init(color: .blue, due: Date.now.addingTimeInterval(2577600), isRecurring: true, name: "Example Event", recurrenceInterval: .monthly, components: [.day, .hour, .minute, .second])
     @ObservationIgnored public static var new: SavedEvent = .init(color: .gray, due: Date.now.addingTimeInterval(2629743), name: "New Event")
-    @ObservationIgnored public static var visionpro: SavedEvent = .init(color: .blue, due: Date(timeIntervalSince1970: 1707253200), name: "Vision Pro")
+    @ObservationIgnored public static var iOS18: SavedEvent = .init(nsColor: .pink, due: Date(timeIntervalSince1970: 1726459200), name: "iOS 18")
     @ObservationIgnored public static var birthday: SavedEvent =  .init(color: .brown, due: Date(timeIntervalSince1970: 1721966400), name: "My Birthday")
     #else
     @ObservationIgnored public static var example: SavedEvent = .init(nsColor: .blue, due: Date.now.addingTimeInterval(2577600), isRecurring: true, name: "Example Event", recurrenceInterval: .monthly, components: [.day, .hour, .minute, .second])
     @ObservationIgnored public static var new: SavedEvent = .init(nsColor: .gray, due: Date.now.addingTimeInterval(2629743), name: "New Event")
-    @ObservationIgnored public static var visionpro: SavedEvent = .init(nsColor: .blue, due: Date(timeIntervalSince1970: 1707253200), name: "Vision Pro")
+    @ObservationIgnored public static var macOS18: SavedEvent = .init(nsColor: .systemPink, due: Date(timeIntervalSince1970: 1726459200), name: "macOS 18")
     @ObservationIgnored public static var birthday: SavedEvent =  .init(nsColor: .brown, due: Date(timeIntervalSince1970: 1721966400), name: "My Birthday")
     #endif
     
