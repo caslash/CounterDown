@@ -21,22 +21,23 @@ struct MenuBarView: View {
             EventListView()
             
             HStack {
-                
                 Button("Quit") {
                     NSApplication.shared.terminate(nil)
                 }.keyboardShortcut("q")
                 
                 Spacer()
                 
-                Button {
-                    self.openWindow(id: "ContentView")
-                } label: {
+                Button(action: openContentView) {
                     Label("Settings", systemImage: "gear")
                         .labelStyle(.iconOnly)
                 }.keyboardShortcut("s")
             }
             .padding()
         }
+    }
+    
+    private func openContentView() {
+        self.openWindow(id: "ContentView")
     }
 }
 

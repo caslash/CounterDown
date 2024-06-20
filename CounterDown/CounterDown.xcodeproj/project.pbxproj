@@ -46,11 +46,13 @@
 		2EBAA5112B58D7AC00F3005D /* EventTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAA5102B58D7AC00F3005D /* EventTimelineProvider.swift */; };
 		2EBAA5182B58DC5C00F3005D /* EventWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBAA5172B58DC5C00F3005D /* EventWidgetView.swift */; };
 		2ECE3EFF2B5E1E5300B68BE7 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECE3EFE2B5E1E5300B68BE7 /* EventView.swift */; };
+		2EF1BDC12C1EB76F00C58137 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF1BDC02C1EB76F00C58137 /* SettingsView.swift */; };
 		2EF29BDE2B60D2820004F616 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF29BDD2B60D2820004F616 /* MenuBarView.swift */; };
 		2EF29BE22B60D2A60004F616 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF29BE12B60D2A60004F616 /* EventListView.swift */; };
 		2EF29BE52B60D8490004F616 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E66C1B02B5A08910032249C /* EventView.swift */; };
 		2EF29BE62B60D8490004F616 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA86A9F2B5CE21100E4B1FD /* EventListView.swift */; };
 		2EF29BE82B60D8660004F616 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF29BE72B60D8660004F616 /* EventView.swift */; };
+		2EF8EFC02C228787001512C5 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF8EFBF2C228787001512C5 /* GeneralSettingsView.swift */; };
 		2EFEBA3B2B525F4000AE19F3 /* CounterDownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEBA3A2B525F4000AE19F3 /* CounterDownApp.swift */; };
 		2EFEBA3D2B525F4000AE19F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEBA3C2B525F4000AE19F3 /* ContentView.swift */; };
 		2EFEBA3F2B525F4100AE19F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EFEBA3E2B525F4100AE19F3 /* Assets.xcassets */; };
@@ -184,7 +186,7 @@
 		2E179CCD2B60D1A700972657 /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1AD5452B5A382B00F405A4 /* SystemSmallEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSmallEventView.swift; sourceTree = "<group>"; };
 		2E1AD5472B5A387F00F405A4 /* SystemMediumEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMediumEventView.swift; sourceTree = "<group>"; };
-		2E541ADC2C1D59A6003766B1 /* CounterDown--Mac--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CounterDown--Mac--Info.plist"; sourceTree = "<group>"; };
+		2E541ADC2C1D59A6003766B1 /* CounterDown--Mac--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CounterDown--Mac--Info.plist"; sourceTree = "<group>"; };
 		2E541ADD2C1E106A003766B1 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		2E66C1A92B58DE4C0032249C /* CounterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CounterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E66C1B02B5A08910032249C /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
@@ -215,12 +217,14 @@
 		2ECE3EFE2B5E1E5300B68BE7 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		2ECE3F002B5E28A100B68BE7 /* CounterDownWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CounterDownWatch.entitlements; sourceTree = "<group>"; };
 		2ECE3F012B5E2D1600B68BE7 /* CounterDownWatchInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CounterDownWatchInfo.plist; sourceTree = "<group>"; };
+		2EF1BDC02C1EB76F00C58137 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2EF29BDD2B60D2820004F616 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		2EF29BE12B60D2A60004F616 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		2EF29BE72B60D8660004F616 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		2EF29BE92B63643E0004F616 /* CounterDown-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "CounterDown-Release.entitlements"; sourceTree = "<group>"; };
 		2EF29BEB2B6364DF0004F616 /* CounterDownWatch-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "CounterDownWatch-Release.entitlements"; sourceTree = "<group>"; };
 		2EF29BED2B6365A20004F616 /* Widgets-Release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "Widgets-Release.entitlements"; sourceTree = "<group>"; };
+		2EF8EFBF2C228787001512C5 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
 		2EFEBA372B525F4000AE19F3 /* CounterDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFEBA3A2B525F4000AE19F3 /* CounterDownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterDownApp.swift; sourceTree = "<group>"; };
 		2EFEBA3C2B525F4000AE19F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 		2E179CBF2B60CD2500972657 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				2E541ADC2C1D59A6003766B1 /* CounterDown--Mac--Info.plist */,
 				2E179CC02B60CD2500972657 /* CounterDownMacApp.swift */,
 				2EF29BDF2B60D28D0004F616 /* Views */,
 				2E179CC42B60CD2600972657 /* Assets.xcassets */,
@@ -387,6 +392,8 @@
 				2EF29BDD2B60D2820004F616 /* MenuBarView.swift */,
 				2E9164112C1D4685007D6D62 /* ContentView.swift */,
 				2E541ADD2C1E106A003766B1 /* EventDetailView.swift */,
+				2EF1BDC02C1EB76F00C58137 /* SettingsView.swift */,
+				2EF8EFBF2C228787001512C5 /* GeneralSettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -403,7 +410,6 @@
 		2EFEBA2E2B525F4000AE19F3 = {
 			isa = PBXGroup;
 			children = (
-				2E541ADC2C1D59A6003766B1 /* CounterDown--Mac--Info.plist */,
 				2EFEBA392B525F4000AE19F3 /* iOS */,
 				2E01056D2B5E177B00A03873 /* watchOS */,
 				2E179CBF2B60CD2500972657 /* macOS */,
@@ -643,11 +649,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF1BDC12C1EB76F00C58137 /* SettingsView.swift in Sources */,
 				2EF29BE22B60D2A60004F616 /* EventListView.swift in Sources */,
 				2E9164122C1D4685007D6D62 /* ContentView.swift in Sources */,
 				2EF29BDE2B60D2820004F616 /* MenuBarView.swift in Sources */,
 				2E179CC12B60CD2500972657 /* CounterDownMacApp.swift in Sources */,
 				2EF29BE82B60D8660004F616 /* EventView.swift in Sources */,
+				2EF8EFC02C228787001512C5 /* GeneralSettingsView.swift in Sources */,
 				2E541ADE2C1E106A003766B1 /* EventDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -794,7 +802,7 @@
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CounterDown--Mac--Info.plist";
+				INFOPLIST_FILE = "macOS/CounterDown--Mac--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CounterDown;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
@@ -832,7 +840,7 @@
 				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "CounterDown--Mac--Info.plist";
+				INFOPLIST_FILE = "macOS/CounterDown--Mac--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = CounterDown;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;

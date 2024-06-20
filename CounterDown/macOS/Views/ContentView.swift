@@ -10,6 +10,7 @@ import SwiftData
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.openWindow) private var openWindow
     @Environment(\.modelContext) private var modelContext
     @Environment(PermissionsService.self) private var permissionsService
     @Environment(Utilities.self) private var utilities
@@ -56,9 +57,15 @@ struct ContentView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .automatic) {
+            ToolbarItem(placement: .primaryAction) {
                 Button(action: createEvent) {
                     Image(systemName: "plus")
+                }
+            }
+            
+            ToolbarItem(placement: .secondaryAction) {
+                Button(action: openSettingsWindow) {
+                    Image(systemName: "gear")
                 }
             }
         }
@@ -74,6 +81,10 @@ struct ContentView: View {
         } catch {
             fatalError()
         }
+    }
+    
+    private func openSettingsWindow() {
+        self.openWindow(id: "SettingsView")
     }
 }
 

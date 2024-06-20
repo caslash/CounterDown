@@ -41,6 +41,12 @@ struct CounterDownMacApp: App {
                 .environment(dateProvider)
         }
         .windowResizability(.contentMinSize)
+        
+        WindowGroup(id: "SettingsView") {
+            SettingsView()
+                .modelContainer(modelContainer)
+                .environment(utilities)
+        }
     }
     
     @MainActor

@@ -42,7 +42,7 @@ struct ContentView: View {
     
     container.mainContext.insert(SavedEvent.example)
     container.mainContext.insert(SavedEvent.birthday)
-    container.mainContext.insert(SavedEvent.visionpro)
+    container.mainContext.insert(SavedEvent.iOS18)
     
     return ContentView()
         .modelContainer(container)
